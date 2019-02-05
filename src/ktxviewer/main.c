@@ -114,7 +114,7 @@ int load_ktx_header (void)
 
 int create_window (void)
 {
-	window = glfwCreateWindow (header.pixelWidth, header.pixelWidth, "ktxviewer", NULL, NULL);
+	window = glfwCreateWindow (header.pixelWidth, header.pixelHeight, "ktxviewer", NULL, NULL);
     if (!window) {
     	fprintf (stderr, "Cannot open window.\n");
     	return 0;
