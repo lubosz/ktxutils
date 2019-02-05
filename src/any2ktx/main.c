@@ -607,7 +607,7 @@ int main (int argc, char *argv[])
 				break;
 			default:
 				fclose (f);
-				fprintf (stderr, "Invalid type.\n");
+				fprintf (stderr, "Unhandled type: %s (0x%04X)\n", table_reverse_lookup (type_table, header.glType), header.glType);
 				cleanup ();
 				return -1;
 			}
