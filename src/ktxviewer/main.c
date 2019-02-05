@@ -138,6 +138,12 @@ void cleanup (void)
 	glfwTerminate ();
 }
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose (window, 1);
+}
+
 int main (int argc, char *argv[])
 {
 	if (argc != 2)
@@ -174,6 +180,8 @@ int main (int argc, char *argv[])
 		cleanup ();
 		return -1;
 	}
+
+	glfwSetKeyCallback(window, key_callback);
 
 	while (!glfwWindowShouldClose (window)) {
 		int w, h;
