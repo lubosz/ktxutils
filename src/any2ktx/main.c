@@ -553,6 +553,10 @@ int main (int argc, char *argv[])
 				pixelSize = components * 4;
 				header.glTypeSize = 4;
 				break;
+			case GL_HALF_FLOAT:
+					pixelSize = components * 2;
+					header.glTypeSize = 2;
+					break;
 			case GL_UNSIGNED_BYTE_3_3_2:
 			case GL_UNSIGNED_BYTE_2_3_3_REV:
 				if (components != 3) {
