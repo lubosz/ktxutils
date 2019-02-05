@@ -59,7 +59,7 @@ int SetType (const char *type_name)
 	}
 	header.glType = table_lookup (type_table, type_name);
 	if (header.glType != 0) return 1;
-	fprintf (stderr, "Invalid type.\n");
+	fprintf (stderr, "Invalid type. %s\n", type_name);
 	return 0;
 }
 
