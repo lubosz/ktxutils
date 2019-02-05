@@ -8,6 +8,6 @@ file (GLOB ANY2KTX_SOURCES *.c)
 include_directories (${ImageMagick_INCLUDE_DIRS})
 
 add_executable (any2ktx ${ANY2KTX_SOURCES})
-target_link_libraries (any2ktx ktxtables glfw OpenGL::OpenGL GLEW::GLEW ${ImageMagick_LIBRARIES})
+target_link_libraries (any2ktx ktxtables glfw OpenGL::GL GLEW::GLEW ${ImageMagick_LIBRARIES})
 
 install (TARGETS any2ktx RUNTIME DESTINATION bin)
